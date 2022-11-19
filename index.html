@@ -9,17 +9,22 @@
     <style>
     body {
         background-color: rgba(255,255,255,1);
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 50%;
+        bottom: 0;
     }
-    img {
+
+    .welcomeImg {
         opacity: 0;
         width: 150px;
         height: 150px;
         padding: 2px;
+        top: -100px;
+        position: absolute;
         border-radius: 100px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        top: 30%;
-        left: 50%;
-        position: absolute;
         transform: translate(-50%, -50%);
         animation: fadeInOutPic 2.4s linear;
     }
@@ -28,10 +33,8 @@
         opacity: 0;
         width: 0px;
         height: 0px;
-        top: 50%;
-        left: 50%;
+        top:0px;
         position: absolute;
-        text-align: center;
         transform: translate(-50%, -50%);
         border: 2px solid black;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -43,8 +46,7 @@
         opacity: 0;
         width: 0px;
         height: 0px;
-        top: 48%;
-        left: 50%;
+        top:-15px;
         position: absolute;
         text-align: center;
         transform: translate(-50%, -50%);
@@ -79,51 +81,130 @@
         100% {opacity: 0}
     }
 
-    .particle {
-        position: absolute;
-        border-radius: 50%;
-    }
-
 	@keyframes particleanim{
-        0% {opacity: 0; background: rgb(141, 141, 141);}
-        12% {opacity: 0.5;} 
-		10% {background: black;}
+        0% {opacity: 0;}
+        10% {opacity: 0.5;}
         90% {top: -30%;}
-        90% {opacity: 0.5;}
-        100% {opacity: 0; background:rgb(141, 141, 141);}
+        100% {opacity: 0;}
     }
 
 	.particle{
         opacity: 0;
+        background: black;
         position: absolute;
         border-radius: 100%;
+        border-radius: 50%;
 	}
 
+    .mainBox{
+        /* background: red; */
+        position: absolute;
+        top: -250px;
+        left: -500px;
+        width: 1000px;
+        height: 500px;
+        opacity: 0.5;
+    }
 
+    .portfolioBox{
+        /* position: absolute; */
+        top: 250px;
+        left: -500px;
+        width: 1000px;
+        height: 500px;
+        opacity: 1;
+    }
+
+    
+    .portfolioTitle {
+        opacity: 1;
+        position: absolute;
+        left: 50%;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: black;
+    }
+
+    .blogBox{
+        /* background: orange; */
+        position: absolute;
+        top: 750px;
+        left: -500px;
+        width: 1000px;
+        height: 500px;
+        opacity: 0.5;
+    }
+
+    .blogTitle {
+        opacity: 1;
+        position: absolute;
+        left: 50%;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: black; 
+    }
+
+    .aboutBox{
+        /* background: green; */
+        position: absolute;
+        top: 1250px;
+        left: -500px;
+        width: 1000px;
+        height: 500px;
+        opacity: 1;
+    }
+
+    .aboutTitle {
+        opacity: 1;
+        position: absolute;
+        left: 50%;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: black; 
+    }
     </style>
 
 </head>
 <body>
-    <div class="mainBox">
+    <div class="welcomeBox">
         <div class="welcomeBorder"></div>
         <h5 class="welcomeText">HI! Welcome to my site!</h5>
         <div class="rotating">
-        <img src="assets/images/profile.jpg">
+        <img class="welcomeImg" src="assets/images/profile.jpg">
         </div>
     </div>
-  <div class="main">
-    <button class="debug">test</button>
-  </div>
-  <div id="particle-container">
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-	<div class="particle"></div>
-</div>
+    <div class="mainBox">
+
+    </div>
+    <div class="portfolioBox">
+        <h1 class="portfolioTitle">Projects</h1>
+    </div>
+    <div class="blogBox">
+        <h1 class="blogTitle">Blog</h1>
+    </div>
+    <div class="aboutBox">
+        <h1 class="aboutTitle">More About Me!</h1>
+    </div>
+    <div id="particle-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    <!-- <img class="testIMG" src="assets/images/profile.jpg"> -->
 <script>
 
 $(".debug").click(function() {
@@ -143,13 +224,13 @@ $(".debug").click(function() {
 
  const particles = document.getElementById('particle-container').getElementsByTagName('*');
     for (const p of particles) {
-        p.style.animation = "particleanim "+randomNumber(40,60)+"s infinite";
+        p.style.animation = "particleanim "+randomNumber(20,60)+"s infinite";
         p.style.animationDelay = ""+randomNumber(1,20)+"s";
         var size = ""+randomNumber(5,20)+"px";
         p.style.height = size;
         p.style.width = size;
-        p.style.top = "500px";
-        p.style.left = ""+randomNumber(0,500)+"px";
+        p.style.top = "750px";
+        p.style.left = ""+randomNumber(-500,500)+"px";
     
     }
 
