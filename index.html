@@ -73,7 +73,12 @@
 
     @keyframes fadeIn {
         0% {background-color: rgba(255,255,255,1);}
-        100% {background-color: rgb(141, 141, 141);}
+        100% {background-color: #343753;}
+    }
+
+    @keyframes fadeInOpacity {
+        from {opacity: 0;}
+        to {opacity: 100%;}
     }
 
     @keyframes fadeOutPic {
@@ -96,73 +101,152 @@
         border-radius: 50%;
 	}
 
-    .mainBox{
-        /* background: red; */
-        position: absolute;
-        top: -250px;
-        left: -500px;
-        width: 1000px;
-        height: 500px;
-        opacity: 0.5;
+    .main-content{
+        opacity: 0;
     }
 
-    .portfolioBox{
-        position: absolute;
-        top: 250px;
-        left: -500px;
-        width: 1000px;
-        height: 500px;
-        opacity: 1;
-    }
 
-    
-    .portfolioTitle {
-        opacity: 1;
-        position: absolute;
-        font-family: 'Be Vietnam Pro', sans-serif;
-        text-align: center;
-        color: gray;
-    }
 
-    .blogBox{
-        /* background: orange; */
-        position: absolute;
-        top: 750px;
-        left: -500px;
-        width: 1000px;
-        height: 500px;
-        opacity: 0.5;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
-    .blogTitle {
-        opacity: 1;
-        position: absolute;
-        font-family: 'Be Vietnam Pro', sans-serif;
-        text-align: center;
-        color: gray; 
-    }
+        section{
+            /* min-height: 10vh; */
+            /* min-width: 100vh; */
+            display: flex;
+            margin-left: -100%;
+            align-items: center;
+        }
+        section:nth-child(1){
+            height: 200px;
+            color: #42455a;
+            background: #e0ffff;
+        } 
+        section:nth-child(2){
+            color: #e0ffff;
+        }
+        
+        section:nth-child(3){
+            color: #42455a;
+            background: #e0ffff;
+        }
+        section .container{
+            margin: 100px;
+        }
+        section h2{
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        section .text-container{
+            display: flex;
+        }
+        section .text-container .text-box{
+            margin: 20px;
+            padding: 20px;
+            background: #343753;
+        }
+        section .text-container .text-box h3{
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
 
-    .aboutBox{
-        /* background: green; */
-        position: absolute;
-        top: 1250px;
-        left: -500px;
-        width: 1000px;
-        height: 500px;
-        opacity: 1;
-    }
+       
+        section h1{
+            margin: 0 auto;
+            font-size: 20px;
+            padding: 15%;
+            text-align: center;
+            vertical-align: middle;
+            color: #343753;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        section .text-container{
+            flex-direction: column;
+        }
+        
 
-    .aboutTitle {
-        opacity: 1;
-        position: absolute;
-        font-family: 'Be Vietnam Pro', sans-serif;
-        text-align: center;
-        color: gray; 
-    }
+        .reveal{
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
+
+        .reveal.active{
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 
 </head>
 <body>
+    <div class="main-content">
+    <section>
+        <h1>A Computer Science graduate who is obsessed in creating
+            various software applications. From games, mobile apps, and utility programs, love them.
+            </br> </br>I'm also noting my learnings through my blogposts,</br> you can check them below.</output>
+        </h1>
+      </section>
+      <section>
+        <div class="container reveal">
+            <h2>POJECTS</h2>
+            <div class="text-container">
+                <div class="text-box">
+                  <h3>Exam Cheat Detection</h3>
+                  <p>
+                    Camera based software for online examination monitoring.</p>
+                </div>
+              </div>
+            <div class="text-container">
+              <div class="text-box">
+                <h3>MediCheck</h3>
+                <p>
+                  Prototype for a social media app for healthcare.</p>
+              </div>
+            </div>
+            <div class="text-container">
+                <div class="text-box">
+                  <h3>Bacteriace</h3>
+                  <p>
+                    Unity game with racing genre, 
+                  </p>
+                </div>
+              </div>
+          </div>
+      </section>
+      
+      <section>
+        <div class="container reveal">
+          <h2>Blog Posts</h2>
+          <div class="text-container">
+            <div class="text-box">
+              <h3>Python</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                eius molestiae perferendis eos provident vitae iste.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div class="container reveal">
+          <h2>About Me</h2>
+          <div class="text-container">
+            <div class="text-box">
+              <h3>Section Text</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                eius molestiae perferendis eos provident vitae iste.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <div class="welcomeBox">
         <div class="welcomeBorder"></div>
         <h5 class="welcomeText">HI! Welcome to my site!</h5>
@@ -170,18 +254,7 @@
         <img class="welcomeImg" src="assets/images/profile.jpg">
         </div>
     </div>
-    <div class="mainBox">
-
-    </div>
-    <div class="portfolioBox">
-        <h1 class="portfolioTitle">PROJECTS</h1>
-    </div>
-    <div class="blogBox">
-        <h1 class="blogTitle">BLOG</h1>
-    </div>
-    <div class="aboutBox">
-        <h1 class="aboutTitle">MORE ABOUT ME!</h1>
-    </div>
+  
     <div id="particle-container">
         <div class="particle"></div>
         <div class="particle"></div>
@@ -213,11 +286,12 @@ $(".debug").click(function() {
 
  $(document).ready(function(){
       setTimeout(function(){
-        $("body").css("animation", "fadeIn 0.5s linear");
-        $("body").css("background-color", "rgb(141, 141, 141)");
-    }, 2000);
+        $("body").css("animation", "fadeIn 1s linear");
+        $("body").css("background-color", "#343753");
+        $(".main-content").css("animation", "fadeInOpacity 1s linear");
+        $(".main-content").css("opacity", "1")
+    }, 2300);
  })
-
  function randomNumber(min, max) { 
     return Math.random() * (max - min) + min;
 } 
@@ -234,5 +308,22 @@ $(".debug").click(function() {
     
     }
 
+    function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
 </script>
 </body>
