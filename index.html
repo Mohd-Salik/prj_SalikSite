@@ -128,12 +128,13 @@
         section:nth-child(3){
             color: #42455a;
             background: #e0ffff;
+            height: 150px;
         }
         section .container{
             margin: 100px;
         }
         section h2{
-            font-size: 40px;
+            font-size: 30px;
             text-align: center;
             text-transform: uppercase;
         }
@@ -144,15 +145,38 @@
             padding-top: 10px;
             text-align: center;
             vertical-align: middle;
-            background: #533634;
+        }
+        section .text-container .text-box{
             padding: 20px;
         }
 
         section .text-container .text-box:hover{
-            background: #139e36;
+            background: #131c9e;
         }
 
         section .text-container .text-box h3{
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        section .blog-container{
+            display: inline-flex;
+            margin: 0 auto;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+        section .blog-container .text-box{
+            padding-left: 50px;
+        }
+
+        section .blog-container .text-box:hover{
+            color:#040824;
+        }
+
+        section .blog-container .text-box h3{
             font-size: 30px;
             text-align: center;
             text-transform: uppercase;
@@ -226,15 +250,23 @@
       
       <section>
         <div class="container reveal">
-          <h2>Blog Posts</h2>
-          <div class="text-container">
+          <h2>Mohd's Notes (Blog)</h2>
+          <div class="blog-container">
             <div class="text-box">
-              <h3>Python</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                eius molestiae perferendis eos provident vitae iste.
-              </p>
+              <h4>Python</h4>
             </div>
+            <div class="text-box">
+                <h4>JavaScript</h4>
+              </div>
+              <div class="text-box">
+                <h4>HTML/CSS</h4>
+              </div>
+              <div class="text-box">
+                <h4>C#</h4>
+              </div>
+              <div class="text-box">
+                <h4>DevLogs</h4>
+              </div>
           </div>
         </div>
       </section>
@@ -244,11 +276,10 @@
           <h2>About Me</h2>
           <div class="text-container">
             <div class="text-box">
-              <h3>Section Text</h3>
+              <h3>Who am I?</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                eius molestiae perferendis eos provident vitae iste.
-              </p>
+                I like movies!
+            </p>
             </div>
           </div>
         </div>
