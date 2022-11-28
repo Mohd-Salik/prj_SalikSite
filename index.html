@@ -47,12 +47,19 @@
         100% {opacity: 0}
     }
 
-	@keyframes particleanim{
-        0% {opacity: 0;}
-        10% {opacity: 0.5;}
-        90% {top: -30%;}
-        100% {opacity: 0;}
-    }
+    @keyframes particleanim{
+          0% {opacity: 0;}
+          10% {opacity: 0.5;}
+          90% {top: -30%;}
+          100% {opacity: 0;}
+      }
+
+      @keyframes particleanim2{
+          0% {opacity: 0;}
+          10% {opacity: 0.5;}
+          90% {top: 30%;}
+          100% {opacity: 0;}
+      }
 
 	.particle{
         opacity: 0;
@@ -108,12 +115,12 @@
           background: #ffffff18;
           backdrop-filter: blur(1);
           font-family: 'Be Vietnam Pro', sans-serif;
-          font-size: 20px;
+          font-size: 17px;
           color: white;
           text-align: center;
-          width: 50%;
+          width: 100%;
           margin-top: 100px;
-          margin-left: 50%;
+          margin-left: 25%;
         }
   
         section .projectTextbox{
@@ -128,7 +135,7 @@
 
 
         section:nth-child(3){
-          border: 1.5px solid rgba(255, 255, 255, 0.13);
+            border: 1.5px solid rgba(255, 255, 255, 0.13);
             border-radius: 20px;
             background: #ffffff18;
             backdrop-filter: blur(1);
@@ -138,7 +145,40 @@
             margin-left: -25vw;
             z-index: 0;
         }
-      
+        
+        section .blogHeader{
+          font-family: 'Be Vietnam Pro', sans-serif;
+          font-size: 17px;
+          color: white;
+          text-align: center;
+          width: 100vw;
+        }
+
+        section .blogContainer{
+          display: inline-flex;
+          text-align: center;
+        }
+
+        section .blogTextBox{
+          border: 1.5px solid rgba(255, 255, 255, 0.171);
+          border-radius: 20px;
+          background: #ffffff05;
+          backdrop-filter: blur(1);
+          font-family: 'Be Vietnam Pro', sans-serif;
+          font-size: 17px;
+          height: 30px;
+          padding: 10px;
+          margin-left: 80px;
+          color: white;
+
+        }
+
+        section .blogTextBox:hover{
+          border: 1.5px solid rgba(255, 255, 255, 0.171);
+          border-radius: 20px;
+          background: #ffffff4b;
+        }
+
         .reveal{
             position: relative;
             transform: translateY(150px);
@@ -150,15 +190,37 @@
             transform: translateY(0);
             opacity: 1;
         }
+
+        #mountain1 {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+          width: 200vh;
+          height: 20vh;
+          margin-top: 0vh;
+          margin-left: -25vw;
+          border: 1.5px solid rgba(255, 255, 255, 0.171);
+          background-color:#0b1542;
+          clip-path: polygon(0% 11px, 8.333333333333334% 24px, 16.666666666666668% 31px, 25% 24px, 33.333333333333336% 17px, 41.66666666666667% 33px, 50.00000000000001% 48px, 58.33333333333334% 61px, 66.66666666666667% 50px, 75% 36px, 83.33333333333333% 37px, 91.66666666666666% 54px, 99.99999999999999% 48px,100% 100%, 0 100%,0 100%) }
+
+        #mountain2 { 
+          width: 200vh;
+          height: 20vh;
+          margin-top: 0vh;
+          margin-left: -25vw;
+          border: 1.5px solid rgba(255, 255, 255, 0.171);
+          background-color:#0b1542;
+          clip-path: polygon(0% 6px, 4.545454545454546% 23px, 9.090909090909092% 38px, 13.636363636363637% 35px, 18.181818181818183% 40px, 22.72727272727273% 52px, 27.272727272727277% 40px, 31.818181818181824% 25px, 36.36363636363637% 3px, 40.909090909090914% 6px, 45.45454545454546% 11px, 50.00000000000001% 8px, 54.545454545454554% 25px, 59.0909090909091% 32px, 63.63636363636365% 53px, 68.18181818181819% 62px, 72.72727272727273% 68px, 77.27272727272728% 48px, 81.81818181818183% 46px, 86.36363636363637% 62px, 90.90909090909092% 63px, 95.45454545454547% 67px, 100.00000000000001% 58px,100% 100%, 0 100%,0 100%) }
     </style>
 
 </head>
 <body>
+    <div id="mountain1"><p>.</p></div>
     <div class="main-content">
     <section>
-        <h1 class="main-text">A Computer Science graduate who is obsessed in creating
-            various software applications. From games, mobile apps, and utility programs, love them.
-            </br> </br>I'm also noting my learnings through my blogposts,</br> you can check them below.</output>
+        <h1 class="main-text">A Computer Science graduate who keeps contemplating on what useless app to develop next. From simple cat viewer, games, mobile stuffs, and utility programs, can't seem to stop 🤔.
+            </br> </br>My learnings are also recorded on my personal blog,</br> you can check them below.</output>
         </h1>
       </section>
       <section>
@@ -197,33 +259,21 @@
       
       <section>
         <div class="container reveal">
-          <h2>Mohd's Notes (Blog)</h2>
+          <div class="blogHeader">
+          <h2>NOTES (BLOG)</h2>
+          </div>
           <div class="blogContainer">
-            <div class="blogTextBox">
-              <h4>Python</h4>
-            </div>
-            <div class="blogTextBox">
-                <h4>JavaScript</h4>
-              </div>
-              <div class="blogTextBox">
-                <h4>Web Development</h4>
-              </div>
-              <div class="blogTextBox">
-                <h4>C#</h4>
-              </div>
-              <div class="blogTextBox">
-                <h4>Random Projects</h4>
-              </div>
+            <p class="blogTextBox">Python Apps</p>
+            <p class="blogTextBox">JavaScript</p>
+            <p class="blogTextBox">Web Development</p>
+            <p class="blogTextBox">Random Prjs</p>
           </div>
         </div>
       </section>
       
       <section>
         <div class="container reveal">
-          <h2>About me?</h2>
-          <div>
-          <p>working in progress</p>
-          </div>
+          <h2 class="projectHeader">ABOUT ME? working in progress</h2>
         </div>
       </section>
    
@@ -246,12 +296,8 @@
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
     </div>
+    <div id="mountain2"><p>.</p></div>
     <!-- <img class="testIMG" src="assets/images/profile.jpg"> -->
 <script>
 var delaytime = 300;
@@ -272,17 +318,16 @@ $(".debug").click(function() {
     return Math.random() * (max - min) + min;
 } 
 
- const particles = document.getElementById('particle-container').getElementsByTagName('*');
-    for (const p of particles) {
-        p.style.animation = "particleanim "+randomNumber(20,60)+"s infinite";
-        p.style.animationDelay = ""+randomNumber(1,20)+"s";
-        var size = ""+randomNumber(5,20)+"px";
-        p.style.height = size;
-        p.style.width = size;
-        p.style.top = "750px";
-        p.style.left = ""+randomNumber(-500,500)+"px";
-    
-    }
+  const particles = document.getElementById('particle-container').getElementsByTagName('*');
+      for (const p of particles) {
+            p.style.animationDelay = ""+randomNumber(1,20)+"s";
+            var size = ""+randomNumber(5,20)+"px";
+            p.style.height = size;
+            p.style.width = size;
+            p.style.left = ""+randomNumber(0,200)+"vh";
+            p.style.top = "150vh";
+            p.style.animation = "particleanim "+randomNumber(20,60)+"s infinite";
+      }
 
     function reveal() {
   var reveals = document.querySelectorAll(".reveal");
