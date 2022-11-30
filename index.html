@@ -9,9 +9,9 @@
     <style>
     body {
       margin: auto;
-      width: 100vh;
-      max-width: 100vw;
-      min-width: 500px;
+      max-width: 100%;
+      max-height: 100vh;
+      overflow-x: hidden;
       background-color: rgba(255,255,255,1);
     }
 
@@ -79,25 +79,23 @@
     @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
         section{
-            /* min-height: 10vh; */
-            /* min-width: 100vh; */
+            /* min-height: 10vh;
+            min-width: 100vh; */
             display: flex;
             align-items: center;
+            
         }
         section:nth-child(1){
             border: 1.5px solid rgba(255, 255, 255, 0.13);
             border-radius: 20px;
             background: #ffffff18;
-            backdrop-filter: blur(1);
-            height: 200px;
-            width: 200vh;
-            margin-top: 25vh;
-            margin-left: -25vw;
-            z-index: 0;
+            width: 100%;
+            height: 25vh;
+            margin-top: 100px;
         } 
 
         section .main-text{
-            font-size: 16px;
+            font-size: 18px;
             padding: 15%;
             text-align: center;
             vertical-align: middle;
@@ -106,21 +104,19 @@
         }
 
         section:nth-child(2){
-          opacity: 1;
+          width: 100%;
+          justify-content: center;
+          margin-top: 20vh;
         }
 
         section .projectHeader{
           border: 1.5px solid rgba(255, 255, 255, 0.13);
           border-radius: 20px;
           background: #ffffff18;
-          backdrop-filter: blur(1);
+          color: white;
           font-family: 'Be Vietnam Pro', sans-serif;
           font-size: 17px;
-          color: white;
           text-align: center;
-          width: 100%;
-          margin-top: 100px;
-          margin-left: 25%;
         }
   
         section .projectTextbox{
@@ -130,7 +126,6 @@
           text-align: center;
           padding-top: 25px;
           width: 100%;
-          margin-left: 25%;
         }
 
 
@@ -138,12 +133,8 @@
             border: 1.5px solid rgba(255, 255, 255, 0.13);
             border-radius: 20px;
             background: #ffffff18;
-            backdrop-filter: blur(1);
-            height: 200px;
-            width: 200vh;
-            margin-top: 25vh;
-            margin-left: -25vw;
-            z-index: 0;
+            justify-content: center;
+            margin-top: 20vh;
         }
         
         section .blogHeader{
@@ -151,7 +142,6 @@
           font-size: 17px;
           color: white;
           text-align: center;
-          width: 100vw;
         }
 
         section .blogContainer{
@@ -168,7 +158,8 @@
           font-size: 17px;
           height: 30px;
           padding: 10px;
-          margin-left: 80px;
+          margin-left: 10px;
+          margin-right: 10px;
           color: white;
 
         }
@@ -177,6 +168,29 @@
           border: 1.5px solid rgba(255, 255, 255, 0.171);
           border-radius: 20px;
           background: #ffffff4b;
+        }
+
+        .projectreveal{
+            position: relative;
+            height: 17vh;
+            padding-bottom: 0px;
+            transition: 0.5s all ease;
+        }
+
+        .projectreveal:hover{
+            padding-bottom: 200px;
+        }
+
+        .projectreveal:hover .prjimages{
+            opacity: 1;
+        }
+        
+
+        .prjimages{
+          width: 200px;
+          height: 200px;
+          opacity: 0;
+          transition: 1s all ease;
         }
 
         .reveal{
@@ -196,19 +210,14 @@
           -moz-transform: rotate(180deg);
           -o-transform: rotate(180deg);
           transform: rotate(180deg);
-          width: 200vh;
-          height: 20vh;
-          margin-top: 0vh;
+          height: 100px;
           margin-left: -25vw;
           border: 1.5px solid rgba(255, 255, 255, 0.171);
           background-color:#0b1542;
           clip-path: polygon(0% 11px, 8.333333333333334% 24px, 16.666666666666668% 31px, 25% 24px, 33.333333333333336% 17px, 41.66666666666667% 33px, 50.00000000000001% 48px, 58.33333333333334% 61px, 66.66666666666667% 50px, 75% 36px, 83.33333333333333% 37px, 91.66666666666666% 54px, 99.99999999999999% 48px,100% 100%, 0 100%,0 100%) }
 
-        #mountain2 { 
-          width: 200vh;
-          height: 20vh;
-          margin-top: 0vh;
-          margin-left: -25vw;
+        #mountain2 {
+          height: 200px;
           border: 1.5px solid rgba(255, 255, 255, 0.171);
           background-color:#0b1542;
           clip-path: polygon(0% 6px, 4.545454545454546% 23px, 9.090909090909092% 38px, 13.636363636363637% 35px, 18.181818181818183% 40px, 22.72727272727273% 52px, 27.272727272727277% 40px, 31.818181818181824% 25px, 36.36363636363637% 3px, 40.909090909090914% 6px, 45.45454545454546% 11px, 50.00000000000001% 8px, 54.545454545454554% 25px, 59.0909090909091% 32px, 63.63636363636365% 53px, 68.18181818181819% 62px, 72.72727272727273% 68px, 77.27272727272728% 48px, 81.81818181818183% 46px, 86.36363636363637% 62px, 90.90909090909092% 63px, 95.45454545454547% 67px, 100.00000000000001% 58px,100% 100%, 0 100%,0 100%) }
@@ -219,8 +228,7 @@
     <div id="mountain1"><p>.</p></div>
     <div class="main-content">
     <section>
-        <h1 class="main-text">A Computer Science graduate who keeps contemplating on what useless app to develop next. From simple cat viewer, games, mobile stuffs, and utility programs, can't seem to stop 🤔.
-            </br> </br>My learnings are also recorded on my personal blog,</br> you can check them below. Have fun!</output>
+        <h1 class="main-text">A Computer Science graduate who keeps contemplating on what out of the blue app to develop next. From simple cat viewer, games, mobile stuffs, and utility programs, can't seem to stop 🤔.
         </h1>
       </section>
       <section>
@@ -228,30 +236,32 @@
             <div class="projectHeader">
               <h2>PROJECTS</h2>
             </div>
-            <div class="projectContainer">
+            <div class="projectreveal">
                 <div class="projectTextbox">
                   <h3>Exam Cheat Detection</h3>
                   <p>Camera based software for online examination monitoring.</p>
+                  <img class="prjimages" src="assets/images/cat.jpg">
                 </div>
               </div>
-            <div class="text-container">
+            <div class="projectreveal">
               <div class="projectTextbox">
                 <h3>MediCheck</h3>
                 <p>Prototype for a social media app for healthcare.</p>
+                <img class="prjimages" src="assets/images/cat.jpg">
               </div>
             </div>
-            <div class="text-container">
+            <div class="projectreveal">
               <div class="projectTextbox">
                   <h3>Bacteriace</h3>
-                  <p>Unity game with racing genre, 
-                  </p>
+                  <p>Unity game with racing genre </p>
+                  <img class="prjimages" src="assets/images/cat.jpg">
               </div>
             </div>
-            <div class="text-container">
+            <div class="projectreveal">
               <div class="projectTextbox">
                   <h3>Elemelons</h3>
-                  <p>2D side-scroller survival game made from UNITY. 
-                  </p>
+                  <p>2D side-scroller survival game made from UNITY.</p>
+                  <img class="prjimages" src="assets/images/cat.jpg">
               </div>
             </div>
           </div>
@@ -260,7 +270,7 @@
       <section>
         <div class="container reveal">
           <div class="blogHeader">
-          <h2>NOTES (BLOG)</h2>
+          <p>My learnings are recorded on my personal blog, you can check them below. Cheerios!</p>
           </div>
           <div class="blogContainer">
             <p class="blogTextBox">Python Apps</p>
@@ -298,7 +308,6 @@
         <div class="particle"></div>
     </div>
     <div id="mountain2"><p>.</p></div>
-    <!-- <img class="testIMG" src="assets/images/profile.jpg"> -->
 <script>
 var delaytime = 300;
 
