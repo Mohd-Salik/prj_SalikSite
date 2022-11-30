@@ -7,6 +7,7 @@
     <script src="assets/js/jquery-3.6.1.min.js"></script>
     <title>Salik's Website</title>
     <style>
+    
     body {
       margin: auto;
       max-width: 100%;
@@ -73,34 +74,42 @@
     @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 
         section{
-            /* min-height: 10vh;
-            min-width: 100vh; */
             display: flex;
             align-items: center;
+            justify-content: center;
             
         }
+        
         section:nth-child(1){
             border: 1.5px solid rgba(255, 255, 255, 0.13);
             border-radius: 20px;
             background: #ffffff18;
+            backdrop-filter: blur(3px);
             width: 100%;
             height: 25vh;
-            margin-top: 100px;
+            margin-top: 25vh;
         } 
+        
 
         section .main-text{
             font-size: 18px;
-            padding: 15%;
-            text-align: center;
+            margin-left: 2%;
+            padding-right: 5%;
+            text-align: left;
             vertical-align: middle;
             font-family: 'Be Vietnam Pro', sans-serif;
             color: white;
         }
 
-        section:nth-child(2){
+        section:nth-child(3){
+          border: 1.5px solid rgba(255, 255, 255, 0.13);
+          border-radius: 20px;
+          background: #ffffff18;
+          backdrop-filter: blur(3px);
           width: 100%;
           justify-content: center;
           margin-top: 20vh;
+          padding-bottom: 50vh;
         }
 
         section .projectHeader{
@@ -111,6 +120,7 @@
           font-family: 'Be Vietnam Pro', sans-serif;
           font-size: 17px;
           text-align: center;
+          margin-top: 10vh;
         }
   
         section .projectTextbox{
@@ -123,18 +133,18 @@
         }
 
 
-        section:nth-child(3){
+        .BlogBox{
             border: 1.5px solid rgba(255, 255, 255, 0.13);
             border-radius: 20px;
+            backdrop-filter: blur(3px);
             background: #ffffff18;
-            justify-content: center;
-            margin-top: 20vh;
             margin-bottom: 20vh;
         }
         
-        section .blogHeader{
+        .blogHeader{
           font-family: 'Be Vietnam Pro', sans-serif;
-          font-size: 17px;
+          margin-top: 10vh;
+          font-size: 15px;
           color: white;
           text-align: center;
         }
@@ -160,26 +170,37 @@
         }
 
         section .blogTextBox:hover{
+          transition: 0.5s all ease;
           border: 1.5px solid rgba(255, 255, 255, 0.171);
           border-radius: 20px;
           background: #ffffff4b;
         }
 
-        section:nth-child(4){
-            justify-content: center;
-            margin-top: 20vh;
+        .ContactContainer{
+          justify-content: left;
+          animation: fadeUp 1.5s linear;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes fadeUp {
+          0% {position: relative;
+            transform: translateY(150px);
+            opacity: 0;}
+          100% {transform: translateY(0);
+            opacity: 1;}
         }
 
         .AboutHeader{
           font-family: 'Be Vietnam Pro', sans-serif;
           font-size: 17px;
           color: white;
-          text-align: center;
+          margin-left: 25%;
+          margin-bottom: -20px;
         }
 
         .AboutContainer{
           display: inline-flex;
-          justify-content: center;
+          margin-left: 25%;
           width: 100%;
         }
 
@@ -200,14 +221,45 @@
             position: relative;
             height: 17vh;
             padding-bottom: 0px;
-            transition: 0.5s all ease;
+            transition: 0.5s all ease-in;
+            transition: 0.3s all ease-out;
         }
 
         .projectreveal:hover{
             padding-bottom: 200px;
         }
 
+        .projectreveal:hover:before{
+          border: 1.5px solid rgba(255, 255, 255, 0);
+            border-radius: 100px;
+            transition: 0.3s all ease;
+            z-index: -1;
+            height: 100%;
+            opacity: 1;
+        }
+
+        
+        .projectreveal:before {
+          content: "";
+          margin-top: 4vh;
+          border: 1.5px solid rgba(255, 255, 255, 0);
+          border-radius: 100px;
+          transition: 0.3s all ease;
+          z-index: -1;
+          
+          background: linear-gradient(to top, rgba(255, 255, 255, 0) , #00000065);
+          left: 0px;
+          top: 0px;
+          height: 0%;
+          width: 200%;
+          margin-left: -50%;
+          position: absolute;
+          opacity: 0;
+        }
+        
+
         .projectreveal:hover .prjimages{
+            transition: 0.3s all ease;
             opacity: 1;
         }
         
@@ -216,7 +268,16 @@
           width: 200px;
           height: 200px;
           opacity: 0;
-          transition: 1s all ease;
+          transition: 0.3s all ease;
+        }
+/* 150 */
+        .HeaderImage{
+          position: relative;
+          max-width: 40vh;
+          max-height: 100vh;
+          height: auto\9;
+          width: auto\9;
+          padding-right: -500vh;
         }
 
         .reveal{
@@ -237,6 +298,7 @@
           -o-transform: rotate(180deg);
           transform: rotate(180deg);
           height: 150px;
+          z-index: 1;
           margin-top: -10vh;
           margin-left: -25vw;
           background-color:#0b1542;
@@ -262,10 +324,25 @@
 <body>
     <div id="mountain1"><p>.</p></div>
     <div class="main-content">
+      
     <section>
-        <h1 class="main-text">A Computer Science graduate who keeps contemplating on what random app to develop next. From simple cat viewer, games, mobile stuffs, and utility programs, can't seem to stop 🤔.
+        <img class="HeaderImage" src="assets/images/bodyprofile.png">
+        <h1 class="main-text">Hi! I'm a Computer Science graduate who develops the most random things! From cat viewers, games, mobile stuffs, to utility programs 🤔. <br><br>You can check out my projects below! or stay and watch the bubbles.. most people usually do.
         </h1>
       </section>
+
+        <div class="ContactContainer">
+          <div class="AboutHeader">
+            <p>Contact me at <span style="color: rgb(129, 191, 241)">alfonso.salik@gmail.com</span>, or get in touch through the following.</p>
+          </div>
+          <div class="AboutContainer">
+            <p class="AboutIcon">Resume</p>
+            <p class="AboutIcon">Github</p>
+            <p class="AboutIcon">LinkedIn</p>
+            <p class="AboutIcon">Facebook</p>
+          </div>
+        </div>
+          
       <section>
         <div class="container reveal">
             <div class="projectHeader">
@@ -302,33 +379,25 @@
           </div>
       </section>
       
+      <div class="blogHeader">
+        <h2>My learnings are recorded on my personal blog, we learn something new everyday! Cheerios!</h2>    
+      </div>
+
       <section>
         <div class="container reveal">
-          <div class="blogHeader">
-          <p>My learnings are recorded on my personal blog, we learn something new everyday! Cheerios!</p>
-          </div>
+          <div class="BlogBox">
           <div class="blogContainer">
             <p class="blogTextBox">Python Apps</p>
             <p class="blogTextBox">JavaScript</p>
             <p class="blogTextBox">Web Development</p>
             <p class="blogTextBox">Random Prjs</p>
           </div>
+          </div>
         </div>
       </section>
 
       
-    <section>
-      <div class="container reveal">
-        <div class="AboutHeader">
-          <p>You can contact me at <span style="color: rgb(129, 191, 241)">alfonso.salik@gmail.com</span>, or get in touch with my accounts below</p>
-        </div>
-        <div class="AboutContainer">
-          <p class="AboutIcon">Resume</p>
-          <p class="AboutIcon">Github</p>
-          <p class="AboutIcon">LinkedIn</p>
-          <p class="AboutIcon">Facebook</p>
-        </div>
-      </section>
+    
 
     </div>
 
@@ -362,7 +431,7 @@
     </div>
     
 <script>
-var delaytime = 300;
+var delaytime = 100;
 
 $(".debug").click(function() {
   $("h1").toggle();
