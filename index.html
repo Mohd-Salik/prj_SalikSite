@@ -54,12 +54,6 @@
           100% {opacity: 0;}
       }
 
-      @keyframes particleanim2{
-          0% {opacity: 0;}
-          10% {opacity: 0.5;}
-          90% {top: 30%;}
-          100% {opacity: 0;}
-      }
 
 	.particle{
         opacity: 0;
@@ -135,6 +129,7 @@
             background: #ffffff18;
             justify-content: center;
             margin-top: 20vh;
+            margin-bottom: 20vh;
         }
         
         section .blogHeader{
@@ -146,7 +141,8 @@
 
         section .blogContainer{
           display: inline-flex;
-          text-align: center;
+          justify-content: center;
+          width: 100%;
         }
 
         section .blogTextBox{
@@ -161,13 +157,43 @@
           margin-left: 10px;
           margin-right: 10px;
           color: white;
-
         }
 
         section .blogTextBox:hover{
           border: 1.5px solid rgba(255, 255, 255, 0.171);
           border-radius: 20px;
           background: #ffffff4b;
+        }
+
+        section:nth-child(4){
+            justify-content: center;
+            margin-top: 20vh;
+        }
+
+        .AboutHeader{
+          font-family: 'Be Vietnam Pro', sans-serif;
+          font-size: 17px;
+          color: white;
+          text-align: center;
+        }
+
+        .AboutContainer{
+          display: inline-flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .AboutIcon{
+          border: 1.5px solid rgba(255, 255, 255, 0.171);
+          border-radius: 20px;
+          background: #ffffff05;
+          font-family: 'Be Vietnam Pro', sans-serif;
+          font-size: 17px;
+          height: 30px;
+          padding: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          color: white;
         }
 
         .projectreveal{
@@ -210,17 +236,26 @@
           -moz-transform: rotate(180deg);
           -o-transform: rotate(180deg);
           transform: rotate(180deg);
-          height: 100px;
+          height: 150px;
+          margin-top: -10vh;
           margin-left: -25vw;
-          border: 1.5px solid rgba(255, 255, 255, 0.171);
           background-color:#0b1542;
           clip-path: polygon(0% 11px, 8.333333333333334% 24px, 16.666666666666668% 31px, 25% 24px, 33.333333333333336% 17px, 41.66666666666667% 33px, 50.00000000000001% 48px, 58.33333333333334% 61px, 66.66666666666667% 50px, 75% 36px, 83.33333333333333% 37px, 91.66666666666666% 54px, 99.99999999999999% 48px,100% 100%, 0 100%,0 100%) }
 
         #mountain2 {
-          height: 200px;
-          border: 1.5px solid rgba(255, 255, 255, 0.171);
-          background-color:#0b1542;
+          z-index: 1;
+          height: 500px;
+          background-color:#394469;
           clip-path: polygon(0% 6px, 4.545454545454546% 23px, 9.090909090909092% 38px, 13.636363636363637% 35px, 18.181818181818183% 40px, 22.72727272727273% 52px, 27.272727272727277% 40px, 31.818181818181824% 25px, 36.36363636363637% 3px, 40.909090909090914% 6px, 45.45454545454546% 11px, 50.00000000000001% 8px, 54.545454545454554% 25px, 59.0909090909091% 32px, 63.63636363636365% 53px, 68.18181818181819% 62px, 72.72727272727273% 68px, 77.27272727272728% 48px, 81.81818181818183% 46px, 86.36363636363637% 62px, 90.90909090909092% 63px, 95.45454545454547% 67px, 100.00000000000001% 58px,100% 100%, 0 100%,0 100%) }
+    
+        #mountain3 {
+          z-index: 2;
+          height: 200px;
+          margin-top: -200px;
+          background-color:#0b1542;
+          clip-path: polygon(0% 11px, 8.333333333333334% 24px, 16.666666666666668% 31px, 25% 24px, 33.333333333333336% 17px, 41.66666666666667% 33px, 50.00000000000001% 48px, 58.33333333333334% 61px, 66.66666666666667% 50px, 75% 36px, 83.33333333333333% 37px, 91.66666666666666% 54px, 99.99999999999999% 48px,100% 100%, 0 100%,0 100%) }
+
+
     </style>
 
 </head>
@@ -228,7 +263,7 @@
     <div id="mountain1"><p>.</p></div>
     <div class="main-content">
     <section>
-        <h1 class="main-text">A Computer Science graduate who keeps contemplating on what out of the blue app to develop next. From simple cat viewer, games, mobile stuffs, and utility programs, can't seem to stop 🤔.
+        <h1 class="main-text">A Computer Science graduate who keeps contemplating on what random app to develop next. From simple cat viewer, games, mobile stuffs, and utility programs, can't seem to stop 🤔.
         </h1>
       </section>
       <section>
@@ -270,7 +305,7 @@
       <section>
         <div class="container reveal">
           <div class="blogHeader">
-          <p>My learnings are recorded on my personal blog, you can check them below. Cheerios!</p>
+          <p>My learnings are recorded on my personal blog, we learn something new everyday! Cheerios!</p>
           </div>
           <div class="blogContainer">
             <p class="blogTextBox">Python Apps</p>
@@ -280,15 +315,33 @@
           </div>
         </div>
       </section>
+
       
-      <section>
-        <div class="container reveal">
-          <h2 class="projectHeader">ABOUT ME? working in progress</h2>
+    <section>
+      <div class="container reveal">
+        <div class="AboutHeader">
+          <p>You can contact me at <span style="color: rgb(129, 191, 241)">alfonso.salik@gmail.com</span>, or get in touch with my accounts below</p>
+        </div>
+        <div class="AboutContainer">
+          <p class="AboutIcon">Resume</p>
+          <p class="AboutIcon">Github</p>
+          <p class="AboutIcon">LinkedIn</p>
+          <p class="AboutIcon">Facebook</p>
         </div>
       </section>
-   
+
     </div>
 
+    
+  </div>
+    
+    
+      <div id="mountain2"><p>.</p></div>
+      <div id="mountain3"><p>.</p></div>
+      
+      
+    
+    
   
     <div id="particle-container">
         <div class="particle"></div>
@@ -307,7 +360,7 @@
         <div class="particle"></div>
         <div class="particle"></div>
     </div>
-    <div id="mountain2"><p>.</p></div>
+    
 <script>
 var delaytime = 300;
 
