@@ -15,13 +15,9 @@
       overflow-x: hidden;
       background-color: rgba(255,255,255,1);
       background-image: radial-gradient(circle farthest-corner at center, rgba(124, 124, 124, 0.123) 27%, rgba(255, 255, 255, 0) 27%);
-      background-size: 2000px 2000px;
+      background-size: 10px 10px;
     }
 
-    /* pacity: 0.8;
-background-image:  linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777);
-background-size: 20px 35px;
-background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;o */
     @keyframes fadeInOutPic {
         0% {width: 10px; height: 150px; opacity: 0;}
         10% {width: 150px; height: 150px; opacity: 1;}
@@ -219,7 +215,15 @@ background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;o */
           padding: 10px;
           margin-left: 10px;
           margin-right: 10px;
+          text-decoration:none;
           color: white;
+        }
+
+        .AboutIcon:hover{
+          transition: 0.5s all ease;
+          border: 1.5px solid rgba(255, 255, 255, 0.171);
+          border-radius: 20px;
+          background: #ffffff4b;
         }
 
         .projectreveal{
@@ -341,10 +345,10 @@ background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;o */
             <p>Contact me at <span style="color: rgb(129, 191, 241)">alfonso.salik@gmail.com</span>, or get in touch through the following.</p>
           </div>
           <div class="AboutContainer">
-            <p class="AboutIcon">Resume</p>
-            <p class="AboutIcon">Github</p>
-            <p class="AboutIcon">LinkedIn</p>
-            <p class="AboutIcon">Facebook</p>
+            <a class="AboutIcon" href="https://github.com/Mohd-Salik" target="_blank">RESUME</a>
+            <a class="AboutIcon" href="https://github.com/Mohd-Salik" target="_blank">GIT</a>
+            <a class="AboutIcon" href="https://www.linkedin.com/in/mohammad-salik-b164b6203/" target="_blank">LINKEDIN</a>
+            <a class="AboutIcon" href="https://www.facebook.com/kan9n/" target="_blank">FACEBOOK</a>
           </div>
         </div>
           
