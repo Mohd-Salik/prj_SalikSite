@@ -232,8 +232,7 @@
             position: relative;
             height: 17vh;
             padding-bottom: 0px;
-            transition: 0.5s all ease-in;
-            transition: 0.3s all ease-out;
+            transition: 0.5s all ease-in-out;
         }
 
         .projectreveal:hover{
@@ -241,7 +240,6 @@
         }
 
         .projectreveal:hover:before{
-          border: 1.5px solid rgba(255, 255, 255, 0);
             border-radius: 100px;
             transition: 0.3s all ease;
             z-index: -1;
@@ -253,12 +251,11 @@
         .projectreveal:before {
           content: "";
           margin-top: 4vh;
-          border: 1.5px solid rgba(255, 255, 255, 0);
-          border-radius: 100px;
+          border-radius: 100%;
           transition: 0.3s all ease;
           z-index: -1;
           
-          background: linear-gradient(to top, rgba(255, 255, 255, 0) , #00000065);
+          background: linear-gradient(to top, rgba(255, 255, 255, 0) , rgba(129, 191, 241, 0.363));
           left: 0px;
           top: 0px;
           height: 0%;
@@ -276,8 +273,8 @@
         
 
         .prjimages{
-          width: 200px;
-          height: 200px;
+          width: auto;
+          height: 30vh;
           opacity: 0;
           transition: 0.3s all ease;
         }
@@ -363,28 +360,31 @@
                 <div class="projectTextbox">
                   <h3>Exam Cheat Detection</h3>
                   <p>Camera based software for online examination monitoring.</p>
-                  <img class="prjimages" src="assets/images/cat.jpg">
+                  <img class="prjimages" src="assets/images/exam1.png">
                 </div>
               </div>
             <div class="projectreveal">
               <div class="projectTextbox">
                 <h3>MediCheck</h3>
                 <p>Prototype for a social media app for healthcare.</p>
-                <img class="prjimages" src="assets/images/cat.jpg">
+                <img class="prjimages" src="assets/images/medicheck1.png">
+                <img class="prjimages" src="assets/images/medicheck2.png">
               </div>
             </div>
             <div class="projectreveal">
               <div class="projectTextbox">
                   <h3>Bacteriace</h3>
                   <p>Unity game with racing genre </p>
-                  <img class="prjimages" src="assets/images/cat.jpg">
+                  <img class="prjimages" src="assets/images/bacte1.png">
+                <img class="prjimages" src="assets/images/bacte2.png">
               </div>
             </div>
             <div class="projectreveal">
               <div class="projectTextbox">
                   <h3>Elemelons</h3>
                   <p>2D side-scroller survival game made from UNITY.</p>
-                  <img class="prjimages" src="assets/images/cat.jpg">
+                  <img class="prjimages" src="assets/images/elemelons2.png">
+                <img class="prjimages" src="assets/images/elemelons1.png">
               </div>
             </div>
           </div>
